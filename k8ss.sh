@@ -36,7 +36,6 @@ helm install traefik traefik/traefik -n traefik --create-namespace \
 export ADDRESS=localhost
 
 helm install k8ss k8ssandra/k8ssandra \
-    ## --set stargate.enabled=true \
     --set ingress.traefik.enabled=true \
     --set ingress.traefik.repair.host=repair.${ADDRESS} \
     --set ingress.traefik.monitoring.grafana.host=grafana.${ADDRESS} \
