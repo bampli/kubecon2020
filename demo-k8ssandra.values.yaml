@@ -1,0 +1,40 @@
+ingress:
+  traefik:
+    # Set to `true` to enable the templating of Traefik ingress custom resources
+    enabled: true
+
+    # Repair ingress
+    repair:
+      # Note this will **only** work if `traefik.enabled` is also `true`
+      enabled: true
+
+      # Name of the Traefik entrypoints where we want to source traffic.
+      entrypoints: 
+        - web
+
+      # Hostname Traefik should use for matching requests.
+      host: repair.k8ssandra.cluster.local
+
+    # Monitoring ingress
+    monitoring: 
+      grafana:
+        # Note this will **only** work if `traefik.enabled` is also `true`
+        enabled: true
+
+        # Name of the Traefik entrypoints where we want to source traffic.
+        entrypoints: 
+          - web
+
+        # Hostname Traefik should use for matching requests.
+        host: grafana.k8ssandra.cluster.local
+      
+      prometheus:
+        # Note this will **only** work if `traefik.enabled` is also `true`
+        enabled: true
+
+        # Name of the Traefik entrypoints where we want to source traffic.
+        entrypoints: 
+          - web
+
+        # Hostname Traefik should use for matching requests.
+        host: prometheus.k8ssandra.cluster.local
