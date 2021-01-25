@@ -39,9 +39,3 @@ helm install k8ss k8ssandra/k8ssandra \
     --set ingress.traefik.repair.host=repair.${ADDRESS} \
     --set ingress.traefik.monitoring.grafana.host=grafana.${ADDRESS} \
     --set ingress.traefik.monitoring.prometheus.host=prometheus.${ADDRESS}
-
-# helm install k8s k8ssandra/k8ssandra -f demo-values.yaml \
-#     --set ingress.traefik.enabled=true \
-#     --set ingress.traefik.repair.host=repair.${ADDRESS} \
-#     --set ingress.traefik.monitoring.grafana.host=grafana.${ADDRESS} \
-#     --set ingress.traefik.monitoring.prometheus.host=prometheus.${ADDRESS}
