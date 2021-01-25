@@ -1,6 +1,7 @@
 # Get Started Script
 
     ./k8ss.sh
+    ./dashboard.sh
 
 # KubeCon 2020
 

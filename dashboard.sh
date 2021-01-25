@@ -34,10 +34,13 @@ EOF
 
 kubectl create -f dashboard.admin-user.yml -f dashboard.admin-user-role.yml
 
+echo "Kubectl Dashboard installed!"
+echo " "
 echo "1. Start a kubectl proxy"
-echo "2. Open the dashboard using link below"
+echo "2. Open the dashboard using the link below"
 echo "3. Authenticate using the provided token"
 echo " "
 echo "http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy"
+echo " "
 
 kubectl -n kubernetes-dashboard describe secret admin-user-token | grep ^token

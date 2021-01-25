@@ -8,6 +8,7 @@
 #
 # Port forwarding:
 #   8080 - HTTP traffic - This is used for accessing the metrics and repair user interfaces
+#   8081 - Stargate traffic - TODO testing
 #   8443 - HTTPS traffic - Useful when accessing the metrics and repair interfaces in a secure manner
 #   9000 - Traefik dashboard for development. Higher level environments should use kubectl port-forward.
 #   9042 - C* traffic - Insecure Cassandra traffic.
@@ -35,7 +36,7 @@ helm install traefik traefik/traefik -n traefik --create-namespace \
 export ADDRESS=localhost
 
 helm install k8ss k8ssandra/k8ssandra \
-    --set stargate.enabled=true \
+    ## --set stargate.enabled=true \
     --set ingress.traefik.enabled=true \
     --set ingress.traefik.repair.host=repair.${ADDRESS} \
     --set ingress.traefik.monitoring.grafana.host=grafana.${ADDRESS} \
