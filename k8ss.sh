@@ -13,10 +13,8 @@
 #   9042 - C* traffic - Insecure Cassandra traffic.
 #   9142 - C* TLS traffic - Secure Cassandra traffic, multiple clusters may run behind this single port.
 #
-# Traefik defaults:
-#   https://github.com/traefik/traefik-helm-chart/blob/master/traefik/values.yaml
+# Traefik defaults: https://github.com/traefik/traefik-helm-chart/blob/master/traefik/values.yaml
 #
-# Dashboards:
 # Grafana: http://grafana.localhost:8080/
 # Prometheus: http://prometheus.localhost:8080/
 # Repair: http://repair.localhost:8080/webui
