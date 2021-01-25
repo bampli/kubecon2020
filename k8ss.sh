@@ -34,7 +34,6 @@ helm install traefik traefik/traefik -n traefik --create-namespace \
 
 # Set 'localhost' for kind or an external IP for GCP cluster
 export ADDRESS=localhost
-#export ADDRESS=https://35.222.69.162/
 
 helm install k8ss k8ssandra/k8ssandra \
     --set stargate.enabled=true \
