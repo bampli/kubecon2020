@@ -1,3 +1,7 @@
+# Get Started Script
+
+    ./k8ss.sh
+
 # KubeCon 2020
 
 ##  Putting Apache Cassandra on Automatic with Kubernetes™
