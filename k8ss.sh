@@ -15,9 +15,10 @@
 #
 # Traefik defaults: https://github.com/traefik/traefik-helm-chart/blob/master/traefik/values.yaml
 #
-# Grafana: http://grafana.localhost:8080/
-# Prometheus: http://prometheus.localhost:8080/
-# Repair: http://repair.localhost:8080/webui
+# Acessing Services: https://k8ssandra.io/docs/topics/accessing-services/
+#   Grafana: http://grafana.localhost:8080/
+#   Prometheus: http://prometheus.localhost:8080/
+#   Repair: http://repair.localhost:8080/webui
 
 # Create kind cluster or set GCP cluster
 kind delete cluster --name k8ssandra
